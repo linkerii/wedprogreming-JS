@@ -1,143 +1,79 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Резюме - Павло Андрусяк</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме — Павло Андрусяк</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <div class="noise"></div>
-  <div class="grid-bg"></div>
+    <div class="resume-container">
+        <header>
+            <h1>Павло Андрусяк</h1>
+            <p>Junior Software Developer | Студент НУ «Львівська політехніка»</p>
+            <p>Група КБ-202</p>
+        </header>
 
-  <div class="wrapper">
+        <section>
+            <h2>Контактна інформація</h2>
+            <ul>
+                <li><strong>Email:</strong> pavlo.andrusiak.kb.2024@lpnu.ua</li>
+                <li><strong>Телефон:</strong> +380 68 620 9719</li>
+                <li><strong>Локація:</strong> Львів, Україна</li>
+            </ul>
+        </section>
 
-    <header>
-      <div class="header-tag">&lt;header&gt;</div>
-      <div class="header-inner">
-        <div class="avatar-box">
-          <span class="avatar-initials">PA</span>
-          <div class="status-dot"></div>
+        <section>
+            <h2>Досвід роботи</h2>
+            <article>
+                <h3>Молодший розробник (Junior Developer)</h3>
+                <p><strong>Компанія:</strong> SoftServe, Львів</p>
+                <p><em>2025 — дотепер</em></p>
+                <ul>
+                    <li>Участь у розробці внутрішніх вебсервісів компанії.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section>
+            <h2>Освіта</h2>
+            <article>
+                <h3>Національний університет «Львівська політехніка»</h3>
+                <p>Спеціальність: Кібербезпека та захист інформації</p>
+                <p><em>2024 — 2028</em></p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Технічні навички</h2>
+            <ul>
+                <li><strong>Мови:</strong> Python, C#</li>
+                <li><strong>Веб:</strong> HTML, CSS, JavaScript</li>
+                <li><strong>Інструменти:</strong> Git, PyCharm, GitHub</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>© 2026 Павло Андрусяк | Лабораторна робота №4</p>
+            </footer>
+    </div>
+
+    <div id="contactModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); z-index:1000;">
+        <div class="resume-container" style="margin: 5% auto; position:relative; max-width: 500px; border: 2px solid #00adb5;">
+            <span id="closeModal" style="position:absolute; right:20px; top:10px; cursor:pointer; font-size: 24px; color: #00adb5;">&times;</span>
+            <h2 style="text-align: center;">Зворотній зв'язок</h2>
+
+            <form action="https://formspree.io/f/ТВІЙ_ЕНДПОЙНТ" method="POST" style="display: flex; flex-direction: column; gap: 10px;">
+                <input type="text" name="name" placeholder="Ваше ім'я" required style="padding: 10px; border-radius: 5px; border: 1px solid #333; background: #222; color: white;">
+                <input type="email" name="email" placeholder="Ваш Email" required style="padding: 10px; border-radius: 5px; border: 1px solid #333; background: #222; color: white;">
+                <input type="tel" name="phone" placeholder="Номер телефону" style="padding: 10px; border-radius: 5px; border: 1px solid #333; background: #222; color: white;">
+                <textarea name="message" placeholder="Ваше повідомлення" rows="4" style="padding: 10px; border-radius: 5px; border: 1px solid #333; background: #222; color: white;"></textarea>
+                <button type="submit" style="background:#00adb5; color:white; padding:12px; border:none; border-radius: 5px; cursor:pointer; font-weight: bold;">Відправити</button>
+            </form>
         </div>
-        <div class="header-text">
-          <h1>Павло<br><span class="accent">Андрусяк</span></h1>
-          <p class="subtitle">Junior Software Developer <span class="sep">|</span> Студент НУ «Львівська політехніка»</p>
-          <div class="badges">
-            <span class="badge">Кібербезпека</span>
-            <span class="badge">КБ-202</span>
-            <span class="badge badge-green">Open to work</span>
-          </div>
-        </div>
-      </div>
-      <div class="header-tag closing">&lt;/header&gt;</div>
-    </header>
+    </div>
 
-    <main>
-
-      <section id="contacts">
-        <div class="section-tag">&lt;section id="contacts"&gt;</div>
-        <h2><span class="section-num">01.</span> Контактна інформація</h2>
-        <ul class="contact-list">
-          <li>
-            <span class="icon">✉</span>
-            <span class="label">Email</span>
-            <a href="mailto:pavlo.andrusiak.kb.2024@lpnu.ua">pavlo.andrusiak.kb.2024@lpnu.ua</a>
-          </li>
-          <li>
-            <span class="icon">☏</span>
-            <span class="label">Телефон</span>
-            <span>+380 68 620 9719</span>
-          </li>
-          <li>
-            <span class="icon">◎</span>
-            <span class="label">Локація</span>
-            <span>Львів, Україна</span>
-          </li>
-        </ul>
-        <div class="section-tag closing">&lt;/section&gt;</div>
-      </section>
-
-      <section id="experience">
-        <div class="section-tag">&lt;section id="experience"&gt;</div>
-        <h2><span class="section-num">02.</span> Досвід роботи</h2>
-        <article class="card">
-          <div class="card-header">
-            <div>
-              <h3>Junior Developer</h3>
-              <p class="company">SoftServe — Львів</p>
-            </div>
-            <time class="date-badge">2025 — дотепер</time>
-          </div>
-          <ul class="card-list">
-            <li>Участь у розробці внутрішніх вебсервісів компанії</li>
-          </ul>
-        </article>
-        <div class="section-tag closing">&lt;/section&gt;</div>
-      </section>
-
-      <section id="education">
-        <div class="section-tag">&lt;section id="education"&gt;</div>
-        <h2><span class="section-num">03.</span> Освіта</h2>
-        <article class="card">
-          <div class="card-header">
-            <div>
-              <h3>Національний університет «Львівська політехніка»</h3>
-              <p class="company">Спеціальність: Кібербезпека та захист інформації</p>
-            </div>
-            <time class="date-badge">2024 — 2028</time>
-          </div>
-        </article>
-        <div class="section-tag closing">&lt;/section&gt;</div>
-      </section>
-
-      <section id="skills">
-        <div class="section-tag">&lt;section id="skills"&gt;</div>
-        <h2><span class="section-num">04.</span> Технічні навички</h2>
-        <div class="skills-grid">
-          <div class="skill-group">
-            <p class="skill-label">Мови програмування</p>
-            <div class="skill-tags">
-              <span class="tag">Python</span>
-              <span class="tag">C#</span>
-            </div>
-          </div>
-          <div class="skill-group">
-            <p class="skill-label">Вебтехнології</p>
-            <div class="skill-tags">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-            </div>
-          </div>
-          <div class="skill-group">
-            <p class="skill-label">Інструменти</p>
-            <div class="skill-tags">
-              <span class="tag">Git</span>
-              <span class="tag">PyCharm</span>
-              <span class="tag">Visual Studio</span>
-            </div>
-          </div>
-          <div class="skill-group">
-            <p class="skill-label">Бази даних</p>
-            <div class="skill-tags">
-              <span class="tag">SQL</span>
-            </div>
-          </div>
-        </div>
-        <div class="section-tag closing">&lt;/section&gt;</div>
-      </section>
-
-    </main>
-
-    <footer>
-      <div class="footer-tag">&lt;footer&gt;</div>
-      <p>© 2026 Павло Андрусяк</p>
-      <div class="footer-tag closing">&lt;/footer&gt;</div>
-    </footer>
-
-  </div>
-
+    <script src="script.js"></script>
 </body>
 </html>
