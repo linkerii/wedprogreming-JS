@@ -20,6 +20,8 @@ window.onload = function() {
         const modal = document.getElementById('contactModal');
         if (modal) modal.style.display = 'block';
     }, 60000);
+
+    addThemeButton();
 };
 
 async function loadComments() {
@@ -29,24 +31,50 @@ async function loadComments() {
         const container = document.querySelector('.resume-container');
 
         const section = document.createElement('section');
-        section.innerHTML = '<h2>Відгуки (API)</h2>';
+        section.innerHTML = '<h2>Відгуки роботодавців (API)</h2>';
 
         comments.forEach(comment => {
             section.innerHTML += `
-                <div style="margin-bottom: 15px; border-bottom: 1px dashed #444;">
-                    <p><strong>${comment.name}</strong></p>
+                <div style="margin-bottom: 15px; border-bottom: 1px dashed #444; padding-bottom: 10px;">
+                    <p><strong>${comment.name}</strong> (${comment.email})</p>
                     <p>${comment.body}</p>
                 </div>`;
         });
         container.insertBefore(section, document.querySelector('footer'));
-    } catch (e) { console.log("Помилка API", e); }
+    } catch (e) {
+        console.log("Помилка при отриманні коментарів:", e);
+    }
 }
 
 function toggleTheme() {
     document.body.classList.toggle('light-theme');
 }
 
+function addThemeButton() {
+    const themeBtn = document.createElement('button');
+    themeBtn.innerText = "Змінити тему (День/Ніч)";
+
+    // Стилізація кнопки
+    themeBtn.style.margin = "10px 0";
+    themeBtn.style.padding = "10px 15px";
+    themeBtn.style.cursor = "pointer";
+    themeBtn.style.backgroundColor = "#00adb5";
+    themeBtn.style.color = "white";
+    themeBtn.style.border = "none";
+    themeBtn.style.borderRadius = "5px";
+    themeBtn.style.fontWeight = "bold";
+
+    themeBtn.onclick = toggleTheme;
+
+    const header = document.querySelector('header');
+    if (header) {
+        header.appendChild(themeBtn);
+    }
+}
+
 const hour = new Date().getHours();
 if (hour >= 7 && hour < 21) {
     document.body.classList.add('light-theme');
+} else {
+    document.body.classList.remove('light-theme');
 }
